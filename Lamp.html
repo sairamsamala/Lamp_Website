@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ilu-Lamp-Clone</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:
+          sans-serif system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        background: #333333;
+        background-image: url(./pictures/background.jpeg);
+        background-size: cover;
+      }
+
+      nav {
+        display: grid;
+        grid-template-columns: auto 1fr 1fr 1fr 1fr 1fr 1fr;
+        align-items: center;
+        padding: 1rem 2rem;
+        color: whitesmoke;
+        gap: 1rem;
+      }
+
+      .nav-left {
+        justify-self: start;
+      }
+
+      .nav-item {
+        justify-self: center;
+        cursor: pointer;
+        position: relative;
+        padding-bottom: 5px;
+      }
+
+      .nav-item::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0%;
+        height: 2px;
+        background-color: whitesmoke;
+        transition: width 0.3s ease;
+      }
+      .nav-item:hover::after {
+        width: 100%;
+      }
+
+      .Logo {
+        height: 60px;
+        width: auto;
+      }
+      button {
+        padding: 17px 34px;
+        background-color: #bb9962;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 15px;
+        font-weight: 500;
+        border: none;
+      }
+      .nav-item-1 {
+        width: 7px;
+        height: 7px;
+        color: #f8f6f3;
+        justify-self: center;
+        cursor: pointer;
+      }
+      .money {
+        justify-self: center;
+        font-size: 16px;
+      }
+      .cart {
+        width: 44px;
+        height: 44px;
+        object-fit: contain;
+      }
+      button:hover {
+        background-color: rgb(43, 37, 37);
+        transition: 0.3s ease;
+        color: white;
+      }
+      .lamp {
+        width: 240px;
+        height: 240px;
+      }
+      .hero-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4rem 10%;
+        min-height: 80vh;
+      }
+
+      .hero-left {
+        flex: 2;
+      }
+
+      .hero-right {
+        flex: 2;
+        color: white;
+        max-width: 500px;
+      }
+
+      .brand-name {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        letter-spacing: 1px;
+      }
+
+      .main-title {
+        font-size: 5rem;
+        line-height: 1.1;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+      }
+
+      .sub-text {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 2.5rem;
+        opacity: 0.9;
+      }
+
+      .explore-btn {
+        background-color: white;
+        color: #4a2c2a;
+        padding: 18px 40px;
+        border: none;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 14px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+      }
+
+      .explore-btn:hover {
+        background-color: #f3f3f3;
+        transform: translateY(-3px);
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          grid-template-columns: auto 1fr auto; 
+        }
+        .nav-item, .money {
+          display: none; 
+        }
+        .hero-container {
+          flex-direction: column;
+          padding: 2rem 5%;
+          text-align: center;
+        }
+        .hero-right {
+          margin-top: 2rem;
+        }
+        .main-title {
+          font-size: 3rem; 
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <a href="#"
+          ><img src="./pictures/logo.png" class="Logo" alt="Logo"
+        /></a>
+      </div>
+
+      <div class="nav-item">HOME</div>
+      <div class="nav-item">SHOP</div>
+      <div class="nav-item">ABOUT</div>
+      <div>
+        <button>CONTACT US</button>
+      </div>
+      <div class="money">₹0.00</div>
+      <div class="nav-item-1">
+        <img src="./pictures/basket.png" class="cart" alt="Cart Icon" />
+      </div>
+    </nav>
+    <section class="hero-container">
+      <div class="hero-left"></div>
+
+      <div class="hero-right">
+        <p class="brand-name">ILU lamps</p>
+        <h1 class="main-title">
+          Turn <br />
+          Moments <br />
+          Into Light
+        </h1>
+        <p class="sub-text">
+          Personalized 3D photo lamps & smart lighting gifts—crafted for
+          birthdays, anniversaries, and heartfelt surprises.
+        </p>
+        <button class="explore-btn">EXPLORE COLLECTIONS</button>
+      </div>
+    </section>
+  </body>
+</html>
